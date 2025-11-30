@@ -3,20 +3,27 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def ola():
-    # return "<h1>Olá Mundo!</h1>"
+def inicio():
     return render_template("index.html")
 
-@app.route("/sobre_equipe")
-def equipe():
-    return render_template("sobre_equipe.html")
+@app.route("/sobre")
+def sobre():
+    return render_template("sobre.html")
 
-@app.route("/lista_termos")
-def lista_termos():
-    return render_template("glossario.html")
+@app.route("/ittakestwo")
+def ittakestwo():
+    return render_template("jogo1.html")
 
-@app.route("/novo_termo")
-def novo_termo():
-    return render_template("sobre_equipe.html")
+@app.route("/jogo2")
+def jogo2():
+    return render_template("jogo2.html")
+
+@app.route("/jogo3")
+def jogo3():
+    return render_template("jogo3.html")
+
+@app.route("/gemini")
+def gemini():
+    return render_template("gemini.html")
 
 app.run()
