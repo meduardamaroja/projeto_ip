@@ -1,0 +1,74 @@
+/* Improved styles for the games site */
+:root{
+  --bg:#071029; /* page background */
+  --card:#0f1724; /* card background */
+  --muted:#9aa4b2; /* secondary text */
+  --accent:#ff6b6b; /* primary accent (buttons) */
+  --accent-2:#7c3aed; /* secondary accent (brand) */
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#02101a);color:#e6eef7}
+.container{max-width:980px;margin:28px auto;padding:18px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.03);border-radius:10px}
+.nav .brand{font-weight:800;color:var(--accent-2);font-size:1.05rem}
+.nav .nav-links{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600;transition:all 180ms ease}
+.nav a:hover{background:rgba(255,255,255,0.03);color:#fff;transform:translateY(-1px)}
+.nav a.active{background:linear-gradient(90deg,var(--accent-2),var(--accent));color:white}
+.hero{margin-top:18px;padding:20px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.card{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 10px 30px rgba(2,6,23,0.65);transition:transform 220ms cubic-bezier(.2,.9,.2,1),box-shadow 220ms}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(2,6,23,0.75)}
+.card img{display:block;width:100%;height:140px;object-fit:cover;border-radius:8px}
+.card h3{margin-top:0}
+.muted{color:var(--muted);font-size:0.95rem}
+.btn{display:inline-block;padding:10px 12px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;border-radius:10px;text-decoration:none;font-weight:700}
+.btn:hover{filter:brightness(1.05);transform:translateY(-2px)}
+.footer{opacity:0.8;font-size:0.9rem;margin-top:22px}
+
+/* Search/input styles */
+.search-wrap{display:flex;gap:10px;align-items:center;margin-top:14px}
+.search-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02);color:inherit}
+.chip{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:0.85rem;color:var(--muted)}
+
+/* Filters (CSS-only) */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.filters input[type="radio"]{display:none}
+.filters label{cursor:pointer;padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted);font-weight:700;border:1px solid rgba(255,255,255,0.02)}
+.filters input[type="radio"]:checked + label{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+
+/* Tag classes on cards */
+.game-card{display:block}
+.game-card.tag-coop{--tag:coop}
+.game-card.tag-narrativa{--tag:narrativa}
+.game-card.tag-acao{--tag:acao}
+.game-card.tag-aventura{--tag:aventura}
+
+/* Default: show all */
+#filter-all:checked ~ .cards .game-card{display:block}
+
+/* When filtering, hide all then show matching class */
+#filter-coop:checked ~ .cards .game-card{display:none}
+#filter-coop:checked ~ .cards .game-card.tag-coop{display:block}
+
+#filter-narrativa:checked ~ .cards .game-card{display:none}
+#filter-narrativa:checked ~ .cards .game-card.tag-narrativa{display:block}
+
+#filter-acao:checked ~ .cards .game-card{display:none}
+#filter-acao:checked ~ .cards .game-card.tag-acao{display:block}
+
+#filter-aventura:checked ~ .cards .game-card{display:none}
+#filter-aventura:checked ~ .cards .game-card.tag-aventura{display:block}
+
+/* game card meta */
+.meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.tags{color:var(--muted);font-size:0.85rem}
+
+/* Responsive tweaks */
+@media (max-width:640px){
+  .container{padding:12px}
+  .nav{padding:10px}
+  .nav .brand{font-size:1rem}
+  .nav a{padding:6px 8px;font-size:0.95rem}
+}
