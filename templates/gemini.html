@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "modelo.html" %}
+{% block conteudo %}
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Gemini</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
 
-</body>
-</html>
+      <section class="hero">
+        <h1>Gemini</h1>
+        <p class="muted">Página vazia reservada com o nome Gemini.</p>
+      </section>
+
+      <p class="footer">Voltar para <a href="index.html">Index</a>.</p>
+    </div>
+  </body>
+{% endblock %}

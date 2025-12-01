@@ -1,10 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "modelo.html" %}
+{% block conteudo %}
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Split Fiction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+      <section class="hero">
+        <h1>Split Fiction</h1>
+        <p class="muted">Jogo cooperativo experimental com narrativa dividida e mecânicas de simulação.</p>
 
-</body>
+        <div class="cards">
+          <div class="card">
+            <img src="https://via.placeholder.com/600x300?text=Split+Fiction" alt="Split Fiction cover" style="width:100%;border-radius:6px;margin-bottom:8px;"/>
+            <h3>Resumo</h3>
+            <p>Split Fiction é um título indie que mistura narrativa, escolhas e cooperação, onde cada jogador assume perspectivas complementares de uma mesma história, influenciando o progresso e as decisões do outro jogador.</p>
+
+            <h4>Gênero</h4>
+            <p>Narrativa interativa / Co-op / Puzzle</p>
+
+            <h4>Idiomas</h4>
+            <p>Áudio: Inglês (varia); Legendas: Inglês, possivelmente outros idiomas dependendo da versão e plataforma.</p>
+
+            <h4>Onde jogar</h4>
+            <p>PC (Steam/GOG) — verificar a loja para plataformas adicionais.</p>
+
+            <h4>Como jogar</h4>
+            <p>Cooperativo onde cada jogador possui informações diferentes; é necessário trocar pistas e coordenar ações para resolver puzzles e avançar na narrativa.</p>
+
+            <h4>Jogadores</h4>
+            <p>2 jogadores (recomenda-se coop online ou local).</p>
+
+            <h4>Avaliação da comunidade</h4>
+            <p class="muted">Nota média aproximada: 7.5/10 — apreciado por fãs de narrativas experimentais e escolhas interligadas.</p>
+
+            <h4>Dicas rápidas</h4>
+            <ul>
+              <li>Compartilhe informações com o parceiro frequentemente.</li>
+              <li>Experimente finais alternativos em replays para ver variações narrativas.</li>
+            </ul>
+
+            <p class="footer">Voltar para <a href="jogos.html">Lista</a>.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
+
+{% endblock %}

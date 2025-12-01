@@ -1,6 +1,19 @@
 {% extends "modelo.html" %}
 {% block conteudo %}
-    <h1>Minha equipe</h1>
-    <p>Minha equipe sou eu, Jayne e Gabriel</p>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+      <section class="hero">
+        <h1>Sobre este site</h1>
+        <p class="muted">Uma pequena coleção de páginas de exemplo sobre jogos. Feito para demonstração.</p>
+        <p>Este projeto contém páginas estáticas: uma listagem, páginas individuais dos jogos e uma página vazia chamada Gemini.</p>
+      </section>
 
+      <p class="footer">Voltar para <a href="index.html">Index</a>.</p>
+    </div>
+</body>
+</html>
 {% endblock %}

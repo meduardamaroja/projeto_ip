@@ -1,10 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "modelo.html" %}
+{% block conteudo %}
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>It Takes Two</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+      <section class="hero">
+        <h1>It Takes Two</h1>
+        <p class="muted">Cooperativo, aventura e plataforma focado em jogabilidade a dois.</p>
 
-</body>
+        <div class="cards">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/99/It_Takes_Two_cover.jpg" alt="It Takes Two cover" style="width:100%;border-radius:6px;margin-bottom:8px;"/>
+            <h3>Resumo</h3>
+            <p>It Takes Two é um jogo cooperativo de aventura desenvolvido pela Hazelight Studios e publicado pela Electronic Arts. Projetado para dois jogadores, combina narrativa cinematográfica com puzzles, plataformas e mecânicas variadas a cada capítulo.</p>
+
+            <h4>Gênero</h4>
+            <p>Plataforma / Aventura / Puzzle / Co-op</p>
+
+            <h4>Idiomas</h4>
+            <p>Áudio: Inglês; Legendas: Inglês, Português (BR), Espanhol, Francês, Alemão, Italiano (varia por plataforma).</p>
+
+            <h4>Onde jogar</h4>
+            <p>PC (Steam / EA App), PlayStation 4/5, Xbox One / Series X|S.</p>
+
+            <h4>Como jogar</h4>
+            <p>Jogo cooperativo para dois: cada jogador controla um dos protagonistas (Cody ou May). Jogabilidade foca em cooperação, com puzzles que exigem coordenação e uso combinado das habilidades de cada personagem.</p>
+
+            <h4>Jogadores</h4>
+            <p>2 jogadores (cooperativo local ou online). Inclui matchmaking e convite de amigos.</p>
+
+            <h4>Avaliação da comunidade</h4>
+            <p class="muted">Nota média aproximada: 8.5/10 — bem recebido pela crítica e jogadores pela criatividade e design cooperativo.</p>
+
+            <h4>Dicas rápidas</h4>
+            <ul>
+              <li>Comunique-se com o parceiro para resolver puzzles mais rápido.</li>
+              <li>Experimente combinar habilidades — muitos desafios exigem colaboração.</li>
+              <li>Explore cada área; há colecionáveis e segredos que enriquecem a história.</li>
+            </ul>
+
+            <p class="footer">Voltar para <a href="jogos.html">Lista</a>.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
+
+{% endblock %}

@@ -1,7 +1,92 @@
 {% extends "modelo.html" %}
 {% block conteudo %}
-    <h1>Olá Mundo! Teste 2!!!!!!</h1>
-    <a href="/sobre_equipe">Sobre a equipe</a>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Jogos - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+	<body>
+			<section class="hero">
+				<h1>WikiGames</h1>
+				<p class="muted">Sua enciclopédia de jogos multiplayer para escolher e jogar com seus amigos.</p>
+
+												<div class="search-wrap">
+													<div class="chip">3 jogos</div>
+												</div>
+
+												<div class="filters">
+													<input type="radio" id="filter-all" name="filter" checked>
+													<label for="filter-all">Todos</label>
+													<input type="radio" id="filter-coop" name="filter">
+													<label for="filter-coop">Co-op</label>
+													<input type="radio" id="filter-narrativa" name="filter">
+													<label for="filter-narrativa">Narrativa</label>
+													<input type="radio" id="filter-acao" name="filter">
+													<label for="filter-acao">Ação</label>
+													<input type="radio" id="filter-aventura" name="filter">
+													<label for="filter-aventura">Aventura</label>
+												</div>
+
+												<div class="cards" id="games-list">
+													<article class="card game-card tag-aventura tag-coop" data-tags="aventura cooperativo">
+								<img src="C:\Users\dudav\UniespPyhtonProjects\projeto_ip_vscode\img\itt2.png" alt="It Takes Two" />
+								<h3>It Takes Two</h3>
+								<p class="muted">Aventura cooperativa e exploração.</p>
+								<div class="meta"><span class="tags">Co-op · 2 jogadores</span><a class="btn" href="jogo1.html">Ver</a></div>
+							</article>
+
+													<article class="card game-card tag-narrativa tag-coop" data-tags="narrativa cooperativo">
+								<img src="https://via.placeholder.com/600x300?text=Split+FICTION" alt="Split FICTION" />
+								<h3>Split Fiction</h3>
+								<p class="muted">Narrativa cooperativa experimental.</p>
+								<div class="meta"><span class="tags">Narrativa · Co-op</span><a class="btn" href="jogo2.html">Ver</a></div>
+							</article>
+
+													<article class="card game-card tag-acao tag-coop" data-tags="acao cooperativo">
+								<img src="https://upload.wikimedia.org/wikipedia/en/1/13/A_Way_Out_cover.jpg" alt="A Way Out" />
+								<h3>A Way Out</h3>
+								<p class="muted">Ação cooperativa e narrativa.</p>
+								<div class="meta"><span class="tags">Ação · 2 jogadores</span><a class="btn" href="jogo3.html">Ver</a></div>
+							</article>
+						</div>
+
+							<section class="hero" style="margin-top:18px;">
+								<h2>Como jogar em colaboração</h2>
+								<p class="muted">Dicas rápidas para usar Discord e Steam para jogar com seus amigos.</p>
+
+								<div class="cards">
+									<article class="card">
+										<h3>Usando o Discord</h3>
+										<ul>
+											<li>Crie um servidor ou entre no servidor do seu grupo.</li>
+											<li>Use um canal de voz para combinar horários e estratégias.</li>
+											<li>Ative a opção de compartilhamento de tela ou Go Live para transmitir seu jogo (pode ser usado como alternativa ao matchmaking).</li>
+											<li>Para jogos cooperativos: convide seu amigo através do botão "Convidar para jogo" (se o jogo integrar com o Discord) ou envie o link/ID do lobby.</li>
+											<li>Dica: use push-to-talk se houver muito ruído para evitar cortes na comunicação.</li>
+										</ul>
+									</article>
+
+									<article class="card">
+										<h3>Usando o Steam</h3>
+										<ul>
+											<li>Adicione seus amigos na sua lista do Steam e abra a janela de chat com eles.</li>
+											<li>Na página do jogo no Steam, use "Convidar para o jogo" ou o recurso de lobby multiplayer (alguns jogos têm botão no overlay do Steam - Shift+Tab).</li>
+											<li>Use o overlay do Steam (Shift+Tab) para enviar convites rapidamente sem sair do jogo.</li>
+											<li>Se o jogo suportar Remote Play Together, um jogador pode convidar outro para jogar como se estivessem locais — excelente para coop local via internet.</li>
+											<li>Dica: verifique se todos têm versões e DLCs compatíveis para evitar problemas de compatibilidade.</li>
+										</ul>
+									</article>
+								</div>
+							</section>
+
+			</section>
+
+			<p class="footer">© 2025 Jogos - Página simples de exemplo.</p>
+		</div>
+	</body>
+</html>
+
 
 
 {% endblock %}

@@ -1,10 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "modelo.html" %}
+{% block conteudo %}
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>A Way Out</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+      <section class="hero">
+        <h1>A Way Out</h1>
+        <p class="muted">Jogo cooperativo focado em narrativa e ação com ênfase em cooperação entre dois jogadores.</p>
 
-</body>
+        <div class="cards">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/1/13/A_Way_Out_cover.jpg" alt="A Way Out cover" style="width:100%;border-radius:6px;margin-bottom:8px;"/>
+            <h3>Resumo</h3>
+            <p>A Way Out é um jogo de ação-aventura cooperativo desenvolvido pela Hazelight Studios. O jogo é projetado para ser jogado por dois jogadores, contando a história de dois prisioneiros que planejam e executam uma fuga e lidam com as consequências.</p>
+
+            <h4>Gênero</h4>
+            <p>Ação / Aventura / Co-op / Narrativa</p>
+
+            <h4>Idiomas</h4>
+            <p>Áudio: Inglês; Legendas: Inglês, Português (BR), Espanhol, outros conforme plataforma.</p>
+
+            <h4>Onde jogar</h4>
+            <p>PC (Origin/EA App/Steam), PlayStation 4, Xbox One.</p>
+
+            <h4>Como jogar</h4>
+            <p>Cooperativo para dois jogadores; cada jogador controla um dos protagonistas. O jogo mistura furtividade, ação e seções de narrativa interativas. Jogadores precisam colaborar para progredir em sequências e resolver situações.</p>
+
+            <h4>Jogadores</h4>
+            <p>2 jogadores (obrigatório coop, com opção de convidar online ou jogar em tela dividida localmente).</p>
+
+            <h4>Avaliação da comunidade</h4>
+            <p class="muted">Nota média aproximada: 8.0/10 — elogiado pela narrativa e design cooperativo, ocasionalmente criticado por limitações de replay.</p>
+
+            <h4>Dicas rápidas</h4>
+            <ul>
+              <li>Combine esforços durante fugas e confrontos — dividir tarefas é essencial.</li>
+              <li>Explore áreas para encontrar ferramentas e rotas alternativas.</li>
+              <li>Use o diálogo e as decisões para aprofundar a história; as escolhas afetam interações.</li>
+            </ul>
+
+            <p class="footer">Voltar para <a href="jogos.html">Lista</a>.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
+
+{% endblock %}
