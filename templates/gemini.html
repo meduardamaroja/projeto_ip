@@ -54,14 +54,30 @@
   <h2>Chat com IA 🎮</h2>
 
   <div class="chat">
-    <div class="msg ai"><span class="bubble ai">Oi! Como posso ajudar?</span></div>
-    <div class="msg user"><span class="bubble user">Olá!</span></div>
+    {% if pergunta %}
+      <div class="msg user"><span class="bubble user">{{ pergunta }}</span></div>
+    {% endif %}
+
+    {% if resposta %}
+      <div class="msg ai"><span class="bubble ai">{{ resposta }}</span></div>
+    {% else %}
+      <div class="msg ai"><span class="bubble ai">Oi! Como posso ajudar?</span></div>
+    {% endif %}
   </div>
 
-  <form>
-    <textarea placeholder="Digite sua pergunta..." required></textarea>
+  <form method="post" action="/gemini">
+    <textarea name="pergunta" placeholder="Digite sua pergunta..." required>{{ pergunta or '' }}</textarea>
     <button type="submit">Enviar</button>
   </form>
+
+  <div style="margin-top:12px">
+    <strong>Perguntas rápidas:</strong>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+      {% for q in perguntas_games %}
+        <a class="quick" href="/gemini?pergunta_rapida={{ q|urlencode }}" style="background:rgba(255,255,255,0.03);padding:8px;border-radius:8px;color:var(--text);text-decoration:none">{{ q }}</a>
+      {% endfor %}
+    </div>
+  </div>
 
 </div>
 
