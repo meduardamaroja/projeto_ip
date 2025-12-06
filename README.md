@@ -29,18 +29,6 @@ O site possui um chatbot funcional integrado ao modelo **gemini-2.5-flash**.
 - Tratamento de erros avançado (API Key inválida, vazamento ou não configurada).
 - Registros detalhados via `logging`.
 
-Exemplo da chamada ao modelo:
-
-```python
-resultado = client.models.generate_content(
-    model=modelo,
-    contents=pergunta,
-    config=genai.types.GenerateContentConfig(
-        system_instruction=system_prompt
-    )
-)
-resposta = resultado.text
-
 ## 🧠 Aprendizados Técnicos
 
 Durante o desenvolvimento, foram explorados conceitos como:
@@ -80,3 +68,17 @@ Durante o desenvolvimento, foram explorados conceitos como:
 
 Projeto desenvolvido para fins acadêmicos —  
 **Introdução à Programação | Sistemas para Internet | UNIESP.**
+
+
+Exemplo da chamada ao modelo:
+
+```python
+resultado = client.models.generate_content(
+    model=modelo,
+    contents=pergunta,
+    config=genai.types.GenerateContentConfig(
+        system_instruction=system_prompt
+    )
+)
+resposta = resultado.text
+
